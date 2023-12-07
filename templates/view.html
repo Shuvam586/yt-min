@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Wix Madefor Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        iframe {
+            width: 70vw;
+            aspect-ratio: 16/9;
+            padding-bottom: 2rem;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300;400;500;600&display=swap">
+    <title>{{ title }} | YouTube Minimalist</title>
+</head>
+
+<body>
+
+    <iframe src="https://www.youtube.com/embed/{{ vid }}"
+        title="youtube-minimalist" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <div class="title">
+        {{ title }}
+    </div>
+
+</body>
+
+</html>

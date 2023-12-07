@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Minimalist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Wix Madefor Display', sans-serif;
+            background-color: #1a1a1a;
+            /* Dark background color */
+            color: #fff;
+            /* White text color */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 100vh;
+        }
+
+        .result {
+            /* padding: 20px; */
+            border: 1px solid #2b2b2b;
+            /* Dark border color */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .result-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .result-2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .result-3 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .result-4 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .result {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 1.1em;
+
+        }
+
+        .info {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+            padding: 1.5rem;
+            padding-bottom: 0.75rem;
+            padding-top: 7vh;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .play-button {
+            padding: 0.5rem 1rem;
+            background-color: #8a888823;
+            width: 6rem;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+
+        .play-button:hover {
+            background-color: #ffffff44;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300;400;500;600&display=swap">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="result result-1"
+            style="background-image: url('https://img.youtube.com/vi/{{ r1['vidId'] }}/hq720.jpg');">
+            <div class="khali"></div>
+            <div class="info">
+                <div class="title">
+                    {{ r1['title'] }}
+                </div>
+                <a href="/view/{{ r1['vidId'] }} " target=" _blank" class="play-button">🚀 play</a>
+            </div>
+
+        </div>
+        <div class="result result-2"
+            style="background-image: url('https://img.youtube.com/vi/{{ r2['vidId'] }}/hq720.jpg');">
+            <div class="khali"></div>
+            <div class="info">
+                <div class="title">
+                    {{ r2['title'] }}
+                </div>
+                <a href="/view/{{ r2['vidId'] }} " target=" _blank" class="play-button">🚀 play</a>
+            </div>
+
+        </div>
+        <div class="result result-3"
+            style="background-image: url('https://img.youtube.com/vi/{{ r3['vidId'] }}/hq720.jpg');">
+            <div class="khali"></div>
+            <div class="info">
+                <div class="title">
+                    {{ r3['title'] }}
+                </div>
+                <a href="/view/{{ r3['vidId'] }} " target=" _blank" class="play-button">🚀 play</a>
+            </div>
+
+        </div>
+        <div class="result result-4"
+            style="background-image: url('https://img.youtube.com/vi/{{ r4['vidId'] }}/hq720.jpg');">
+            <div class="khali"></div>
+            <div class="info">
+                <div class="title">
+                    {{ r4['title'] }}
+                </div>
+                <a href="/view/{{ r4['vidId'] }} " target=" _blank" class="play-button">🚀 play</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
